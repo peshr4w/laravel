@@ -1,0 +1,100 @@
+    * {
+        box-sizing: border-box;
+    }
+    
+    .images {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .image {
+        width: 200px;
+        border-radius: 10px;
+        margin: 10px;
+    }
+    
+    .image img {
+        width: 100%;
+    }
+    
+    body {
+        background-color: white;
+    }
+    
+    .card {
+        padding-top: 10px;
+        margin-bottom: 20px;
+    }
+    
+    .card .quote {
+        width: 35px;
+        position: absolute;
+        top: -17.5px;
+        left: 10px;
+        background-color: white;
+        padding: 0 5px;
+    }
+    
+    .card .quote object {
+        width: 100%;
+    }
+    
+    .container {
+        z-index: 10;
+        background-color: #FFF;
+    }
+    
+    .animate {
+        animation: animate 0.5s linear;
+    }
+    
+    @keyframes animate {
+        0% {
+            left: -100px;
+            opacity: 0;
+        }
+        100% {
+            left: 0;
+            opacity: 1;
+        }
+    }
+    
+    .header {
+        padding: 10px;
+    }
+    
+    .right-side {
+        overflow: hidden;
+    }
+    
+    .can-image {
+        animation: can_animate 1s ease-in-out;
+    }
+    
+    .text-animate {
+        animation: text_animate 1s ease-in-out;
+    }
+    
+    @keyframes text_animate {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+    
+    @keyframes can_animate {
+        0% {
+            transform: translateX(200px) rotate(40deg);
+            opacity: 0;
+        }
+        100% {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+    
+    .header .brand {
+        width: 50px;
+    }
