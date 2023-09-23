@@ -70,6 +70,6 @@ class CardsController extends Controller
     public function destroy($id)
     {
         cards::find($id)->delete();
-        return response()->json("updated");
+        return response()->json("deleted");
     }
 }
