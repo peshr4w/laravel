@@ -60,7 +60,7 @@ class CardsController extends Controller
     {
         $card = cards::find($id);
         $card->update($request->all());
-        return response()->json($card);
+        return response()->json("updated");
 
     }
 
@@ -70,5 +70,6 @@ class CardsController extends Controller
     public function destroy($id)
     {
         cards::find($id)->delete();
+        return response()->json("updated");
     }
 }
