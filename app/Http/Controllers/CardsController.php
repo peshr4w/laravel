@@ -31,7 +31,7 @@ class CardsController extends Controller
     public function store(Request $request)
     {
         $card = $request->validate(['title'=>'required', 'body'=> "required"]);
-        cards::create($card);
+        cards::create($card->all());
         return response()->json("created");
 
     }
