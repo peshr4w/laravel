@@ -30,8 +30,7 @@ class CardsController extends Controller
      */
     public function store(Request $request)
     {
-        $card = $request->validate(['title'=>'required', 'body'=> "required"]);
-        cards::create($card->all());
+        cards::create($request->all());
         return response()->json("created");
 
     }
