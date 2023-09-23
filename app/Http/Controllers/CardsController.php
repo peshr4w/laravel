@@ -13,7 +13,7 @@ class CardsController extends Controller
      */
     public function index()
     {
-        $cards = cards::find();
+        $cards = cards::all();
         return response()->json($cards);
     }
 
